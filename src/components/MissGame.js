@@ -11,6 +11,20 @@ class MissGame extends Component {
       correct: [false, false, false, false]
     }
     this.checkPassword = this.checkPassword.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+
+  componentWillMount() {
+    window.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleKeyDown);
+  }
+
+  handleKeyDown(e) {
+    if (e.keyCode === 16) 
+      this.setState({ showPage: this.state.showPage === 1 ? 2 : 1 });
   }
 
   checkPassword(num, passwd) {

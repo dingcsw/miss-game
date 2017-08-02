@@ -22587,10 +22587,26 @@
 	      correct: [false, false, false, false]
 	    };
 	    _this.checkPassword = _this.checkPassword.bind(_this);
+	    _this.handleKeyDown = _this.handleKeyDown.bind(_this);
 	    return _this;
 	  }
 
 	  _createClass(MissGame, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      window.addEventListener('keydown', this.handleKeyDown);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      window.removeEventListener('keydown', this.handleKeyDown);
+	    }
+	  }, {
+	    key: 'handleKeyDown',
+	    value: function handleKeyDown(e) {
+	      if (e.keyCode === 16) this.setState({ showPage: this.state.showPage === 1 ? 2 : 1 });
+	    }
+	  }, {
 	    key: 'checkPassword',
 	    value: function checkPassword(num, passwd) {
 	      var _this2 = this;
