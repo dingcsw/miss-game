@@ -22918,6 +22918,10 @@
 	              _this2.input3.value = '';
 	              _this2.input4.value = '';
 	              _this2.input1.focus();
+	              _this2.setState({ disabled: true });
+	              setTimeout(function () {
+	                _this2.setState({ disabled: false });
+	              }, 60000);
 	            }
 	          },
 	          onClick: this.autoMoveCursor,

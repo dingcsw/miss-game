@@ -69,6 +69,10 @@ class PasswordInput extends Component {
               this.input3.value = '';
               this.input4.value = '';
               this.input1.focus();
+              this.setState({ disabled: true });
+              setTimeout(() => {
+                this.setState({ disabled: false });
+              }, 60000);
             }
           }}
           onClick={this.autoMoveCursor}
