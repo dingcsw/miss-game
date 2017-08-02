@@ -1,0 +1,70 @@
+body {
+}
+
+.password-row {
+  padding-top: 7%;
+}
+
+.password-row-2 {
+  padding-top: 12%;
+}
+
+
+.password-input-div {
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
+.password-input-div-2 {
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
+.password-input-div-2-pic {
+  text-align: right;
+  width: 100px;
+  height: 100px;
+}
+
+.password-input-div-2-pic-2 {
+  text-align: right;
+  width: 200px;
+  height: 200px;
+  border-color: #777777;
+  border-width: 5px;
+  border-radius: 10px;
+}
+
+.password-input {
+  margin: 0 auto;
+  background-color: #81C7D4;
+  height: 150px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.password-input:focus {
+  outline: none;
+}
+
+.password-result-text {
+  color: #A75242;
+  text-align: center;
+  padding-top: 5%;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.blink-text {
+  animation: blinker 1s linear 2;
+}
+
+.unlocked-div {
+  padding-top: 40%;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
