@@ -22937,7 +22937,7 @@
 	              _this2.setState({ disabled: true });
 	              setTimeout(function () {
 	                _this2.setState({ disabled: false });
-	              }, 60000);
+	              }, 300000);
 	            }
 	          },
 	          onClick: this.autoMoveCursor,
